@@ -1,1 +1,12 @@
-GET http://localhost:8001/service/getAll
+#GET http://localhost:8001/service/getAll
+#GET http://localhost:8001/paiment/getAll
+#GET http://localhost:8001/paiment/test
+#POST http://localhost:8001/paiment/add
+#Content-Type: application/json
+#
+#{
+#  "montant": 500.0,
+#  "modePaiement": "cash",
+#  "datePaiement": "2022-09-28"
+#}
+DELETE http://localhost:8001/paiment/delete/12

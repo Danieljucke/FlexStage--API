@@ -19,15 +19,14 @@ public class ServiceController {
     private ServiceRepository serviceRepository;
 
     @GetMapping(value = "/getAll",headers = "Accept=application/json")
-    public @ResponseBody
+    private @ResponseBody
     ResponseEntity<Iterable<Service>> getAllService () {
         try {
             Iterable<Service> services = new ArrayList<>();
             services = serviceRepository.findAll();
             return new ResponseEntity<>(services, HttpStatus.OK);
         } catch (Exception exception) {
-            exception.printStackTrace();
+          throw new IllegalStateException(exception) ;
         }
-        return null;
     }
 }
