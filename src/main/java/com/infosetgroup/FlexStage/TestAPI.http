@@ -1,6 +1,6 @@
 #GET http://localhost:8001/service/getAll
-#GET http://localhost:8001/paiment/getAll
-#GET http://localhost:8001/paiment/test
+#GET http://localhost:8001/paiement/getAll
+#GET http://localhost:8001/paiement/test
 #POST http://localhost:8001/paiment/add
 #Content-Type: application/json
 #
@@ -11,4 +11,25 @@
 #}
 #DELETE http://localhost:8001/paiment/delete/12
 #GET http://localhost:8001/salle/getAll
-GET http://localhost:8001/salle/getSalle/1
+#GET http://localhost:8001/salle/getSalle/1
+#POST http://localhost:8001/paiment/payer
+#Content-Type: application/json
+#
+#{
+#  "montant":13000.0,
+#  "modePaiement":"Cash",
+#  "datePaiement":"2022-09-28"
+#}
+GET http://localhost:8001/reservation/getYourReservation/3
+#POST http://localhost:8001/reservation/reserver
+#Content-Type: application/json
+#
+#{
+#  "paiement": null,
+#  "dateArriver": "2022-02-11",
+#  "dateFin": "2022-12-15",
+#  "motif": "mission de service",
+#  "user": {
+#    "id": 3
+#  }
+#}

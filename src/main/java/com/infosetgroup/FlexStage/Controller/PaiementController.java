@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/paiment")
+@RequestMapping("/paiement")
 public class PaiementController {
     @Autowired
     private PaiementRepository paiementRepository;
@@ -41,10 +41,10 @@ public class PaiementController {
     {
         return paiementService.getPaiement();
     }
-    @PostMapping("/add")
-    public void test(@RequestBody Paiement paiement)
+    @PostMapping("/payer")
+    public void payer(@RequestBody Paiement paiement)
     {
-        paiementService.test(paiement);
+        paiementService.effectuerPaiement(paiement);
     }
     // prend le paiement par id
     private Paiement paiement;
@@ -58,8 +58,8 @@ public class PaiementController {
                         .findFirst()
                         .orElseThrow();
     }
-    @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Integer id){
-        paiementService.suppression(id);
-    }
+//    @DeleteMapping("/delete/{id}")
+//    public void delete(@PathVariable("id") Integer id){
+//        paiementService.suppression(id);
+//    }
 }

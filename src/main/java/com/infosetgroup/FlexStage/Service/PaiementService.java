@@ -21,8 +21,8 @@ public class PaiementService {
         return (List<Paiement>) paiementRepository.findAll();
     }
 
-    public void test(Paiement paiement) {
-        System.out.println(paiement);
+    public void effectuerPaiement(Paiement paiement) {
+        paiementRepository.save(paiement);
     }
 
 
