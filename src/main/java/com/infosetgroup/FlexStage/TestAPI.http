@@ -9,4 +9,6 @@
 #  "modePaiement": "cash",
 #  "datePaiement": "2022-09-28"
 #}
-DELETE http://localhost:8001/paiment/delete/12
+#DELETE http://localhost:8001/paiment/delete/12
+#GET http://localhost:8001/salle/getAll
+GET http://localhost:8001/salle/getSalle/1
