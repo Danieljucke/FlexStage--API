@@ -28,7 +28,8 @@ private ReservationRepository reservationRepository;
                 .orElseThrow(()-> new IllegalStateException("Aucune réservation trouvé !"));
     }
     @PostMapping("/reserver")
-    public  Reservation reserverService (@RequestBody Reservation reservation){
+    public  Reservation reserverService (@RequestBody Reservation reservation)
+    {
         return reservationRepository.save(reservation);
     }
 }

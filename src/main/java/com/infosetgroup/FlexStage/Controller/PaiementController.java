@@ -37,7 +37,7 @@ public class PaiementController {
     }
 
     @GetMapping(path = "/test")
-    public List<Paiement> getpaiment(Paiement paiement)
+    public List<Paiement> getPaiement(Paiement paiement)
     {
         return paiementService.getPaiement();
     }
@@ -52,7 +52,7 @@ public class PaiementController {
     public Paiement getPaiementById(@PathVariable long id) {
 
         return
-                        getpaiment(paiement)
+                        getPaiement(paiement)
                         .stream()
                         .filter(element -> element.getId() == id)
                         .findFirst()
